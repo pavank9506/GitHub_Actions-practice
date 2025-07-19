@@ -1,8 +1,7 @@
 name: first workflow
 
 on:
-- push
-- workflow_dispatch
+ push
 
 jobs:
   firstjob:
@@ -20,5 +19,22 @@ jobs:
 
      - name: fourth step
        run: echo "steps.third_step.present_Working_directory"
+
+
+
+
+
+#        name: second workflow
+# on:
+#  push:
+# jobs:
+#   second:
+#     runs-on: self-hosted
+#     steps:
+#     - name: runs the first job
+#       run: echo "run's the first job"
+
+#     - name: run the second job
+#       run: echo "print run the second job"
 
      
