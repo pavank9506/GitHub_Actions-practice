@@ -6,7 +6,7 @@ on:
 
 jobs:
   firstjob:
-     runs_on: ubuntu_latest
+     runs-on: ubuntu_latest
      steps:
      - name: first step
        run: echo "hello world"
@@ -16,7 +16,7 @@ jobs:
 
      - name: third step
        id: third_step
-       run: echo "present_Working_directory: ${pwd}" >> GItHUB_OUTPUT
+       run: pwd >> GITHUB_OUTPUT
 
      - name: fourth step
        run: echo "steps.third_step.present_Working_directory"
