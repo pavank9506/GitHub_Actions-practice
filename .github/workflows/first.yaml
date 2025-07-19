@@ -1,0 +1,24 @@
+name: first workflow
+
+on:
+- push
+- workflow_dispatch
+
+jobs:
+  firstjob:
+     runs_on: ubuntu_latest
+     steps:
+     - name: first step
+       run: echo "hello world"
+
+     - name: second step
+       run: ls -l
+
+     - name: third step
+       id: third_step
+       run: echo "present_Working_directory: ${pwd}" >> GItHUB_OUTPUT
+
+     - name: fourth step
+       run: echo "steps.third_step.present_Working_directory"
+
+     
